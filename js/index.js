@@ -1,22 +1,3 @@
-const serchE1 = document.querySelector('.serch_bar');
-const serchInputE1 = serchE1.querySelector('input');
-console.log(serchE1);
-console.log(serchInputE1);
-
-serchE1.addEventListener('click', function(){
-    serchInputE1.focus();
-});
-
-serchInputE1.addEventListener('focus',function(){
-    serchE1.classList.add('focused');
-    serchInputE1.setAttribute('placeholder','Serch Keyword')
-});
-
-serchInputE1.addEventListener('blur',function(){
-    serchE1.classList.remove('focused');
-    serchInputE1.setAttribute('placeholder','')
-});
-
 const badgeE1 = document.querySelector('header .badges');
 
 console.log(badgeE1);
@@ -51,7 +32,7 @@ window.addEventListener('scroll', _.throttle(function(){
 
     }else{
         //뱃지 나오기
-        // badgeE1.style.display = 'block';
+        badgeE1.style.display = 'block';
         gsap.to(badgeE1,0.6,{
             opacity:1
         });
